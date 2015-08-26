@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dictation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/write_answer_area" />
+
+    <EditText
+        android:id="@+id/dictation_context"
+        android:layout_width="400dp"
+        android:layout_height="600dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dictation_title"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:hint="@string/write_answer" />
+
+    <TextView
+        android:id="@+id/dictation_over"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dictation_title"
+        android:gravity="center"
+        android:hint="@string/dictation_over"
+        android:textSize="@dimen/text_size_large"
+        android:visibility="gone" />
+
+</RelativeLayout>

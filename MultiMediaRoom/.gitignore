@@ -1,0 +1,11 @@
+bin
+gen
+obj
+jni
+.settings
+mp3lame
+sat
+libs
+.classpath
+.project
+

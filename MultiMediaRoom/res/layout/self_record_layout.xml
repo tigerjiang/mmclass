@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/record_bg" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="50dp" >
+
+            <TextView
+                android:id="@+id/record_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center|left"
+                android:textSize="@dimen/text_size_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/playback_layout"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <SeekBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dip"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:thumb="@drawable/thumb"
+                    android:thumbOffset="5dp" />
+
+                <TextView
+                    android:id="@+id/showtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/control_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/recoder"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dip"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/button"
+                android:text="@string/start_record"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <Button
+                android:id="@+id/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/button"
+                android:text="@string/playback"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/input_seatno"
+            android:textSize="@dimen/text_size_large" >
+        </TextView>
+
+        <Button
+            android:id="@+id/dial_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/phone_number"
+            android:layout_marginLeft="10dp"
+            android:text="@string/dial" />
+
+        <Button
+            android:id="@+id/hang_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/phone_number"
+            android:layout_marginRight="10dp"
+            android:text="@string/hang" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/character_layout"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:columnWidth="50dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth" />
+
+    <GridView
+        android:id="@+id/digital_layout"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:columnWidth="50dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth" />
+
+</LinearLayout>

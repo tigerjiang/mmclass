@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/selfstudy_bg"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/media_demand"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selfstudy_button"
+            android:text="@string/media_demand"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/record_practice"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selfstudy_button"
+            android:text="@string/record_practice"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/electronic_dictionary"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selfstudy_button"
+            android:text="@string/electronic_dictionary"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/ip_call"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selfstudy_button"
+            android:text="@string/ip_call"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/user_help"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selfstudy_button"
+            android:text="@string/user_help"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/study_layout"
+        android:layout_toRightOf="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="-30dp" >
+    </FrameLayout>
+
+</RelativeLayout>

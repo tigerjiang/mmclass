@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/normal_view_height"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/title"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/left_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:gravity="center|left"
+        android:textColor="@color/style_3"
+        android:textSize="@dimen/text_size_large" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/studentname_bg"
+        android:gravity="center"
+        android:textColor="@color/style_1"
+        android:textSize="@dimen/text_size_large" />
+
+    <ImageView
+        android:id="@+id/about_device"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/hand_up"
+        android:src="@drawable/about"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/hand_up"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/down_volumn"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/hand_up" />
+
+    <ImageView
+        android:id="@+id/down_volumn"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/up_volumn"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/down_volumn" />
+
+    <ImageView
+        android:id="@+id/up_volumn"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/up_volumn" />
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/exam_standard_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/exam_standard" />
+
+    <TextView
+        android:id="@+id/exam_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exam_standard_status"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/exam_standard" />
+
+    <TextView
+        android:id="@+id/exam_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/exam_standard_status"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/exam_standard" />
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/exam_info"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/answer_selected_label" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="600dp"
+            android:orientation="vertical"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/answer_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/exam_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/exam_info"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/left_layout"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <TextView
+            android:id="@+id/exam_standard_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="left"
+            android:text="@string/exam_standard" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/answer_write_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exam_content_layout"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/left_layout"
+        android:gravity="left"
+        android:text="@string/answer_write_label" />
+
+    <EditText
+        android:id="@+id/answer_content"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/answer_write_alert"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/left_layout"
+        android:background="@drawable/answer_text_bg"
+        android:gravity="left" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/answer_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/answer_content"
+        android:background="@drawable/answer_submit_btn"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/exam_standard_over"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/style_2"
+        android:gravity="center"
+        android:text="@string/exam_over"
+        android:visibility="gone" />
+
+</RelativeLayout>

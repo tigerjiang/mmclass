@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/full"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/process_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/control_layout"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/currenttime"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dip"
+            android:layout_weight="8"
+            android:background="#005a5a5a"
+            android:maxHeight="8dp"
+            android:minHeight="8dp"
+            android:nextFocusRight="@android:id/progress"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:progressDrawable="@drawable/color_progressbar"
+            android:thumbOffset="5dp" />
+
+        <TextView
+            android:id="@+id/totaltime"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="20dip"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dip"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dip"
+            android:layout_marginRight="5dip"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/button_rew" />
+
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/button_pause" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="40dip"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/button_ff" />
+    </LinearLayout>
+
+</RelativeLayout>
